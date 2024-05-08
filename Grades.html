@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Book</title>
+</head>
+<body>    
+     <div>
+        <input type="text" id="grade" placeholder="Enter your Number">
+
+        <button onclick="result()">Check Your Grade</button>
+
+        <p id="res"></p>
+     </div>
+     <script>
+        function result(){
+            x=parseFloat(document.getElementById("grade").value);
+            if(x>90){
+                document.getElementById("res").innerHTML="Congratulation You got A+";
+            }else if(x>85){
+                document.getElementById("res").innerHTML="Congratulation You got A";
+            }else if(x>75){
+                document.getElementById("res").innerHTML="Congratulation You got A-";
+                
+            }else if(x>65){
+                document.getElementById("res").innerHTML="Congratulation You got B";
+            }else if(x>55){
+                document.getElementById("res").innerHTML="Congratulation You got C";
+            }else if(x>50){
+                document.getElementById("res").innerHTML="Congratulation You got D";
+            }else {document.getElementById("res").innerHTML="Sorry You Failed,Your Grade is F";      
+            }
+        }
+     </script>
+</body>
+</html>

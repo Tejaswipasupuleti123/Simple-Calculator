@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+ <html lang = "en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <p>Input : <input type="text" id="name" > </p>
+
+        <button onclick="showname()">Click to show Message</button>
+
+<script>
+     
+     function showmyname(){
+
+        var x = document.getElementById("name").value;
+
+        alert("My Name is :"+X);
+     }
+
+</script>
+</body>
+</html>
