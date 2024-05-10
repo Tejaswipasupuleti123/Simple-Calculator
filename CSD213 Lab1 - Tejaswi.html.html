@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 </head>
@@ -26,7 +26,8 @@
   </tr> 
 </table><br> 
 <input type="button" onclick="insertRowBottom()" value="Insert row">  
-<input type="button" onclick="deleteRowTop()" value="delete row">  
+<input type="button" onclick="deleteRowTop()" value="delete row">
+<p id="message">message:</p>  
 </br>
 
 <script>
@@ -39,23 +40,25 @@ function insertRowBottom(){
   var tablecell2 = rw.insertCell(1);
   tablecell1.innerHTML = "Row "+T+" Col 1";
   tablecell2.innerHTML = "Row "+T+"  Col 2";
+  if(tbl.rows.length=="1"){
+      document.getElementById("message").innerHTML="";
+  }
 }
 
 function deleteRowTop(){
   var tbl= document.getElementById("Mytable");
   var counter = tbl.rows.length;
     tbl.deleteRow(0);
+
+    if(tbl.rows.length=="0"){
+      document.getElementById("message").innerHTML="no more rows to delete";
+
+
+    }
 }
 
-function updateMessage(rowsLeft) {
-  var messageElement = document.getElementById("message");
-  if (rowsLeft === 0) {
-    messageElement.innerText = "Message: No more rows to delete";
-  } else {
-    messageElement.innerText = ""; // Clear message if rows are present
-  }
 
-}
+
 </script>
 </body>
 </html>
