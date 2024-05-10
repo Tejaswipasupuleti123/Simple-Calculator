@@ -10,26 +10,25 @@
         <input type="text" id="grade" placeholder="Enter your Number">
 
         <button onclick="result()">Check Your Grade</button>
-
         <p id="res"></p>
      </div>
      <script>
         function result(){
             x=parseFloat(document.getElementById("grade").value);
             if(x>90){
-                document.getElementById("res").innerHTML="Congratulation You got A+";
+                document.getElementById("res").innerHTML="Congratulations,You got A+";
             }else if(x>85){
-                document.getElementById("res").innerHTML="Congratulation You got A";
+                document.getElementById("res").innerHTML="Congratulations,You got A";
             }else if(x>75){
-                document.getElementById("res").innerHTML="Congratulation You got A-";
-                
+                document.getElementById("res").innerHTML="Congratulations,You got A-";
             }else if(x>65){
-                document.getElementById("res").innerHTML="Congratulation You got B";
+                document.getElementById("res").innerHTML="Congratulations,You got B";
             }else if(x>55){
-                document.getElementById("res").innerHTML="Congratulation You got C";
+                document.getElementById("res").innerHTML="Congratulations,You got C";
             }else if(x>50){
-                document.getElementById("res").innerHTML="Congratulation You got D";
-            }else {document.getElementById("res").innerHTML="Sorry You Failed,Your Grade is F";      
+                document.getElementById("res").innerHTML="Congratulations,You got D";
+            }else {
+                document.getElementById("res").innerHTML="Sorry You Failed,Your Grade is F";      
             }
         }
      </script>
